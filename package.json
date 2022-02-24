@@ -1,0 +1,37 @@
+{
+  "name": "api-ideal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon --es-module-specifier-resolution=node --experimental-json-modules --trace-deprecation -e js --require dotenv/config ./",
+    "start": "cross-env NODE_ENV=production node --es-module-specifier-resolution=node --experimental-json-modules --trace-deprecation ./",
+    "scratch": "cross-env NODE_ENV=development nodemon --es-module-specifier-resolution=node --experimental-json-modules --trace-deprecation -e js --require dotenv/config ./scratch.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y5labs/api-ideal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/y5labs/api-ideal/issues"
+  },
+  "homepage": "https://github.com/y5labs/api-ideal#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "http-mutunga": "^2.0.0",
+    "neo-blessed": "^0.2.0",
+    "node-fetch": "^3.2.0",
+    "pg": "^8.7.3",
+    "pg-boss": "^7.1.0",
+    "seacreature": "^2.17.0",
+    "telnet2": "^0.0.1"
+  }
+}
