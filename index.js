@@ -1,3 +1,4 @@
+import './lib/tracing'
 import './lib/hub'
 import './lib/observe'
 import './lib/health'
