@@ -2,7 +2,6 @@ import inject from 'seacreature/lib/inject'
 import { trace, SpanStatusCode } from '@opentelemetry/api'
 import { SemanticAttributes } from '@opentelemetry/semantic-conventions'
 
-// Tracing docs:
 // https://github.com/open-telemetry/opentelemetry-js-api/blob/main/docs/tracing.md
 
 inject('pod', async ({ app }) => {
@@ -11,7 +10,8 @@ inject('pod', async ({ app }) => {
     const span = tracer.startSpan(`GET /`, {
       attributes: {
         [SemanticAttributes.HTTP_METHOD]: 'GET',
-        [SemanticAttributes.HTTP_URL]: req.url
+        [SemanticAttributes.HTTP_URL]: req.url,
+        [SemanticAttributes.HTTP_STATUS_CODE]: 200
       }
     })
     try {
