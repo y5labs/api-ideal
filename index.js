@@ -1,4 +1,5 @@
 import './lib/hub'
+import './lib/tracing'
 import './lib/observe'
 import './lib/health'
 import './lib/pg-db'
