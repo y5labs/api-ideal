@@ -1,3 +1,4 @@
+process.on('uncaughtException', e => console.error('uncaughtException', e))
 import './lib/hub'
 import './lib/tracing'
 import './lib/observe'
@@ -10,5 +11,6 @@ import './lib/req-validate'
 import './lib/req-guard'
 import './lib/express'
 import './lib/telnet'
-import './app/index'
+import './lib/worker-server'
+import './app/'
 import './lib/plumbing'
